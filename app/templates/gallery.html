@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if gallery_images==[] %}
+    <h1>Empty :(</h1>
+    {% endif %}
+
+    {% for img in gallery_images %}
+    <img src="{{img}}" width="256" height="256"/>
+    {% endfor %}
+{% endblock %}

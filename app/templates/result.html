@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>CAT IS HERE!</h1>
+    <img src="static/image_storage/seg_masks/name4pred_mask.jpg" width="512" height="512"/>
+    <form method="post" action="result">
+    <input type="submit" name="submit_button" value="TRY AGAIN!">
+    <input type="submit" name="submit_button" value="ADD TO GALLERY!">
+</form>
+{% endblock %}

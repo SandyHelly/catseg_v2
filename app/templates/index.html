@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>CATS SEGMENTATION! v2.0 YAAA deployyyyyy</h1>
+    <h2>upload image of your cat and see whats happened!</h2>
+    <h3>image must be .jpg, .jpeg, .png type and less than 1mb size</h2>
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    <img src="{{url_for('static', filename='image_storage/detect.jpg')}}" align="middle" width="512" height="256"/>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+{% endblock %}
