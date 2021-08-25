@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 EXPOSE 5000
-ARG AWS_BUCKET
 ENV TZ=Europe/Moscow
 COPY . /usr/src/app
 WORKDIR /usr/src/app

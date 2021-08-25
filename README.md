@@ -1,4 +1,4 @@
-[![Publish on Docker Hub](https://github.com/SandyHelly/catseg_ml_v2/actions/workflows/pub_on_release.yaml/badge.svg?branch=master)](https://github.com/SandyHelly/catseg_ml_v2/actions/workflows/pub_on_release.yaml)
+[![Test, Publish and Deploy](https://github.com/SandyHelly/catseg_v2/actions/workflows/test_pub_deploy.yaml/badge.svg)](https://github.com/SandyHelly/catseg_v2/actions/workflows/test_pub_deploy.yaml)
 
-# catseg_app
-web app 4 cat segmentation
+# catseg
+Web app for semantic segmentation. Neural network find a cat in your picture!
