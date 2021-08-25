@@ -21,7 +21,7 @@ name4pred = 'name4pred.jpg'
 
 @app.errorhandler(413)
 def app_handle_413(e):
-    flash('IMAGE MUST BE < 1 Mb!')
+    flash('PICTURE MUST BE < 1 Mb!')
     return render_template("index.html", title='Main Page'), 413
 
 @app.errorhandler(404)
@@ -52,7 +52,7 @@ def index():
                 inference.make_prediction(model)
                 return redirect(url_for('result'))
             else:
-                flash('IMAGE MUST BE .JPG or .PNG')
+                flash('PICTURE MUST BE .JPG or .PNG')
                 return render_template("index.html", title='Main Page')
     return render_template("index.html", title='Main Page')
 
@@ -63,7 +63,7 @@ def gallery():
     for item in s3.Bucket(AWS_BUCKET).objects.all():
         bucket_items.append(item.key)
     gallery_images = [gi for gi in bucket_items if '_mask.jpg' in gi]
-    #generate presigned links to show images from private s3 bucket
+    #show images from private s3 bucket
     for object_name in gallery_images:
         url = s3_client.generate_presigned_url('get_object',
                                                 Params={'Bucket': AWS_BUCKET,

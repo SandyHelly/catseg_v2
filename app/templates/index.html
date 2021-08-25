@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>CATS SEGMENTATION! v2.0 YAAA deployyyyyy</h1>
-    <h2>upload image of your cat and see whats happened!</h2>
-    <h3>image must be .jpg, .jpeg, .png type and less than 1mb size</h2>
+    <h1>CATSEG! v2.0 </h1>
+    <h2>upload picture and neural network find a cat in this picture!</h2>
+    <h3>picture must be .jpg, .jpeg, .png type and less than 1mb size</h2>
     {% for message in get_flashed_messages() %}
         <p>{{ message }}</p>
     {% endfor %}
